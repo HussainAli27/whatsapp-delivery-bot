@@ -57,7 +57,7 @@ app.post("/webhook", (req, res) => {
           to: from,
        //   text: { body: "Ack: " + msg_body },
        recipient_type: "individual",
-       type: "interactive",
+       type: "product_list",
        interactive: {
            type: "list",
            header: {
@@ -72,38 +72,13 @@ app.post("/webhook", (req, res) => {
            },
            action: {
            button: "Items to choose f",
-           sections: [
-               {
-               title: "SECTION_1_TITLE",
-               rows: [
-                   {
-                   id: "SECTION_1_ROW_1_ID",
-                   title: "SECTION_1_ROW_1_TITLE",
-                   description: "SECTION_1_ROW_1_DESCRIPTION"
-                   },
-                   {
-                   id: "SECTION_1_ROW_2_ID",
-                   title: "SECTION_1_ROW_2_TITLE",
-                   description: "SECTION_1_ROW_2_DESCRIPTION"
-                   }
-               ]
-               },
-               {
-                   title: "SECTION_1_TITLE",
-                   rows: [
-                       {
-                       id: "SECTION_1_ROW_1_ID",
-                       title: "SECTION_1_ROW_1_TITLE",
-                       description: "SECTION_1_ROW_1_DESCRIPTION"
-                       },
-                       {
-                       id: "SECTION_1_ROW_2_ID",
-                       title: "SECTION_1_ROW_2_TITLE",
-                       description: "SECTION_1_ROW_2_DESCRIPTION"
-                       }
-                   ]
-                   },
-               ]
+           catalog_id: "5817071505066608",
+           product_retailer_id: "5930011587113989",
+           product_items: [
+            {
+              product_retailer_id: "5930011587113989",
+            }
+           ]
             } 
             }
         },
